@@ -1,11 +1,15 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import CreateItem from '../component/CreateItem'
 import { useDispatch } from 'react-redux'
+import { formContext } from '../context/TodoContext'
 
 function CreateItemContainer () {
-  const [title, setTitle] = useState('')
-  const [contents, setContents] = useState('')
+  // const [title, setTitle] = useState('')
+  // const [contents, setContents] = useState('')
   const id = useRef(3)
+
+  const { title, setTitle, contents, setContents } = useContext(formContext)
+  // console.log('formState', formState)
 
   const dispatch = useDispatch()
 
@@ -16,6 +20,7 @@ function CreateItemContainer () {
     setTitle('')
     setContents('')
   }
+  console.log(1)
 
   const onChangeTitle = (e) => {
     setTitle(e.target.value)

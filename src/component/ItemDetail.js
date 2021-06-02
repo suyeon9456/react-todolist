@@ -3,6 +3,7 @@ import { RiDraftLine, RiCheckboxCircleLine } from 'react-icons/ri'
 
 function ItemDetail ({ title, contents, updateTitle, updateContents, isUpdate, todoUpdate, onChangeTitle, onChangeContents, onUpdateStatus }) {
   // const [isUpdate, setIsUpdate] = useState(false)
+  // const { title, setTitle, contents, setContents } = useContext(formContext)
   return (
     <div>
       {isUpdate
